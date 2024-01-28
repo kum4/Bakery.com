@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/logopan.png">
+  <title>ベーカリーショップ</title>
+  <style>
+    #slideshow {
+      position: relative;
+      width: 600px;
+      height: 350px;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 5s;
+    }
+
+    .visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="header">
+  <header class="header01">
+    <input id="nav-input" type="checkbox" class="nav-hidden">
+    <label id="menu-btn" for="nav-input"><span></span></label>
+    <div class="logo"><img src="img/titlepan.png" alt="ロゴ"></div>
+    <nav class="nav">
+      <ul class="menuitem">
+        <li class="menulist">
+          <a href="#abouttop">ABOUT</a>
+        </li>
+        <li class="menulist">
+          <a href="#list">SERVICE</a>
+        </li>
+        <li class="menulist">
+          <a href="#reco">PRODUCTS</a>
+        </li>
+        <li class="menulist">
+          <a href="#con">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+</body>
+
+<body class="items">
+  <div class="container">
+
+    <div id="slideshow">
+      <img class="slide visible" src="img/img.title.png" alt="タイトル">
+      <img class="slide" src="img/imgpan1.jpg" alt="イメージ画１">
+      <img class="slide" src="img/imgpan2.jpg" alt="イメージ画２">
+    </div>
+
+    <script>
+      let current = 0;
+      const slides = document.querySelectorAll(".slide");
+      setInterval(() => {
+        // 現在の画像を非表示にする
+        slides[current].classList.remove("visible");
+        // 次の画像に切り替える
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("visible");
+      }, 5000);
+    </script>
+    <div class="about">
+      <h2 class="abouttop" id="abouttop">Bakeryについて</h2>
+    </div>
+    <p id=about>
+      Bakeryは、街の中心部にあるアットホームな雰囲気のパン屋です。朝早くから店内は焼きたてのパンの香りで満ち溢れ、地元の人々や観光客で賑わっています。
+
+      店内には、フレンチブレッド、バゲット、シナモンロール、チョコレートクロワッサンなど、様々な種類のパンが並んでいます。また、季節限定の特別なパンや焼き菓子も人気です。
+
+      Bakeryの特徴は、地元で採れた新鮮な食材を使用したパンや焼き菓子を提供していることです。店主は地元の農家や生産者と緊密な関係を築き、素材の新鮮さと品質にこだわっています。
+
+      店内には、カフェスペースもあります。ここでは、店の自慢のパンや焼き菓子を購入したお客様が、店内でくつろぎながらコーヒーや紅茶と一緒に味わうことができます。
+
+      Bakeryは、地元のコミュニティに愛されるパン屋として知られており、毎朝多くのお客様が新鮮なパンを求めて訪れます。また、特別なイベントや季節ごとのお祝い事に合わせて、オーダーメイドのケーキや焼き菓子も提供しています。</p>
+    <ul class="item">
+      <li class="list">
+        <div class="image">
+          <img src="img/yakitatepan.jpg" alt="焼きたてのパン">
+        </div>
+        <div class="title-1">
+          <h3 class="title">焼きたてパン</h3>
+        </div>
+        <p class="content">
+          手作りの温かさが詰まった焼きたてのパン、ふんわりとした焼きたてのパンをお楽しみください
+          <br>
+        </p>
+        <div class="title-1">
+          <a href="#" class="btn">くわしく見る</a>
+        </div>
+      </li>
+      <li class="list" id="list">
+        <div class="image">
+          <img src="img/eatspace.jpg" alt="イートイン">
+        </div>
+        <div class="title-1">
+          <h3 class="title">イートイン</h3>
+        </div>
+        <p class="content">
+          香り高い焼きたてパンと、心地よいイートインスペースで至福のひとときを
+        </p>
+        <div class="title-1">
+          <a href="#" class="btn">くわしく見る</a>
+        </div>
+      </li>
+      <li class="list">
+        <div class="image">
+          <img src="img/sozai.jpg" alt="素材">
+        </div>
+        <div class="title-1">
+          <h3 class="title">こだわりの素材</h3>
+        </div>
+        <p class="content">
+          こだわり抜いた素材と職人の技が生み出す、絶品の味わいをご堪能ください
+        </p>
+        <div class="title-1">
+          <a href="#" class="btn">くわしく見る</a>
+        </div>
+      </li>
+    </ul>
+
+    <section class="products">
+      <h2 class="heading" id="reco">おすすめ商品</h2>
+      <ul>
+        <li>
+          <a href="product-1.html" target="_blank">
+            <img src="img/あんぱん.jpg" width="400" height="400" alt="あんぱん">
+            <h3 class="title2">あんぱん</h3>
+            <p class="price">119円(税込)</p>
+          </a>
+        </li>
+        <li>
+          <a href="product-2.html" target="_blank">
+            <img src="img/メロンパン.jpg" width="400" height="400" alt="メロンパン">
+            <h3 class="title2">メロンパン</h3>
+            <p class="price">158円(税込)</p>
+          </a>
+        </li>
+        <li>
+          <a href="product-3.html" target="_blank">
+            <img src="img/カレーパン.jpg" width="400" height="400" alt="あんぱん">
+            <h3 class="title2">カレーパン</h3>
+            <p class="price">122円(税込)</p>
+          </a>
+        </li>
+        <li>
+          <a href="product-4.html" target="_blank">
+            <img src="img/ツイストドーナツ.jpg" width="400" height="400" alt="あんぱん">
+            <h3 class="title2">ツイストドーナツ</h3>
+            <p class="price">138円(税込)</p>
+          </a>
+        </li>
+        <li>
+          <a href="product-5.html" target="_blank">
+            <img src="img/ジャム.jpg" width="400" height="400" alt="ピーナツバターと苺ジャムセット">
+            <h3 class="title2">スプレッドセット</h3>
+            <p class="price">1500円(税込)</p>
+          </a>
+        </li>
+        <li>
+          <a href="product-6.html" target="_blank">
+            <img src="img/syokupann.jpg" width="400" height="400" alt="ピーナツバターと苺ジャムセット">
+            <h3 class="title2">生食パン（６枚切）</h3>
+            <p class="price">225円(税込)</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <div class="title-2">
+      <h2 class="abouttop" id="con">お問い合わせ</h2>
+      <p class="about">
+        住所:〒○○○-××××&nbsp;□□□県△△△市○○-××
+        <br>TEL:000-1111-2222
+        <br>FAX:33-4444-5555
+        <br>E-mail:○○○○○○@gmail.com
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="img/titlepan.png" alt="ロゴ">
+      </div>
+      <nav class="nav">
+        <ul class="snsitem">
+          <li class="snslist">
+            <a href=#abouttop>ABOUT</a>
+          </li>
+          <li class="snslist">
+            <a href="#list">SERVICE</a>
+          </li>
+          <li class="snslist">
+            <a href="#reco">PRODUCTS</a>
+          </li>
+          <li class="snslist">
+            <a href="">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="sns-container">
+        <li class="snslist">
+          <a href=""><img src="img/line-icon.png" alt="line" class="icon-line"></a>
+        </li>
+        <li class="snslist">
+          <a href=""><img src="img/insta-icon.png" alt="instagram" class="icon-instagram"></a>
+        </li>
+      </ul>
+    </div>
+    <p class="copyright"><small>(c) Bakery.com</small></p>
+  </footer>
+  </div>
+</body>
+
+</html>
