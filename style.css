@@ -8,6 +8,7 @@ body {
   background-color:#f4941630;
 }
 
+
 /* header */
 header.header01{
   display: flex;
@@ -51,6 +52,10 @@ h1 {
 }
 #slideshow img{
   border-radius: 5%;
+}
+
+#slideshow div{
+  margin:0;
 }
 div .about{
   text-align: center;
@@ -236,6 +241,7 @@ a:hover {
   margin-top: 8px;
 }
 
+
 /* footer */
 
 footer {
@@ -403,6 +409,19 @@ div .title-2{
 #nav-input:checked~#menu-btn span::after{
   top:0;
   transform: rotate(-90deg);
+}
+
+ #slideshow img{
+  /* position: relative; */
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+} 
+#slideshow {
+  margin-bottom: 0;
+}
+h2.abouttop{
+  margin-top: 0;
 }
 div.logo{
   width:200px;
