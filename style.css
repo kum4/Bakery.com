@@ -88,7 +88,7 @@ ul.item {
   list-style: none;
   display: flex;
   justify-content: center;
-  max-width: 960px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -433,18 +433,19 @@ header.header01 #nav-input:checked~nav.nav{
 }
 #slideshow img{
   border-radius: 5%;
-  width: 90%;
+  width: 100%;
 }
 
    ul.item{
     flex-wrap: wrap;
-    max-width: 420px;
+    max-width: 100%;
+    text-align: center;
+  
   }
 
   li.list {
     width: 100%;
     min-height: 400px;
-    margin-right: 0;
     margin-bottom: 3rem;
   }
 
