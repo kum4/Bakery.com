@@ -376,7 +376,7 @@ div .title-2{
   height: 2px;
   width: 100%;
   border-radius: 3px;
-  background-color: #3656a7;
+  background-color: rgb(160, 98, 21);
   position: absolute;
   transition: 0.2s;
 }
