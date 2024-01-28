@@ -52,6 +52,9 @@ h1 {
 #slideshow img{
   border-radius: 5%;
 }
+div .about{
+  text-align: center;
+}
 h2.abouttop{
   position: relative;
   display: inline-block;
