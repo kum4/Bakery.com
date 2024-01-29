@@ -87,7 +87,7 @@ h2.abouttop:after {
   margin-top: 16px;
   line-height: 2.0;
 }
-
+/* service */
 .container {
   width:100%;
   padding: 10rem 1rem;
@@ -97,7 +97,7 @@ ul.item {
   display: flex;
   justify-content: center;
   max-width: 100%;
-  margin: 0 auto;
+  padding-top: 100px;
 }
 
 li.list {
@@ -133,9 +133,8 @@ h3 .title{
 
 p.content{
   line-height: 1.6;
-  color:#333;
 }
-
+/* 製品情報 */
 a.btn{
   display: inline-block;
   text-decoration: underline;
@@ -152,7 +151,6 @@ a.btn:hover {
 
 h2 {
   margin: 0;
-  /* font-weight: lighter; */
   font-size: 20px;
 }
 
@@ -164,7 +162,7 @@ h3.title2 {
 
 img {
   vertical-align: bottom;
-  border-radius: 2%;
+  border-radius: 5%;
 }
 
 a{
@@ -361,7 +359,6 @@ div .title-2{
   text-align: center;
 }
 .title{
-  /* background-color: aqua; */
   vertical-align: bottom;
   border-radius: 0%;
 }
