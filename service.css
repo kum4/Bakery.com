@@ -85,12 +85,6 @@ header {
 }
 
 
-.buy {
-  background-color: rgba(244, 65, 5, 0.6);
-  padding: 10px 20px;
-  box-shadow: 0 5px rgba(244, 65, 5, 0.8);
-  color: #fff;
-}
 
 .buy:active {
   position: relative;
