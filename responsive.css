@@ -1,77 +1,41 @@
+/* タブレットサイズで見た場合のスタイル */
+@media screen and (max-width: 1000px) {
 
-
-/* スマホサイズで見た場合のスタイル */
-@media screen and (max-width: 670px) {
-  /* ヘッダー */
-  .c-hamburger-menu__button {
-    align-items: center;
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 5px; /* カスタマイズしてください */
-    height: 32px; /* カスタマイズしてください */
-    justify-content: center;
-    width: 32px; /* カスタマイズしてください */
-  }
-}
-
-.c-hamburger-menu__button-mark {
-  background-color: #fff; /* カスタマイズしてください */
-  display: block;
-  height: 1.5px; /* カスタマイズしてください */
-  transition: 0.3s; /* カスタマイズしてください */
-  width: 20px; /* カスタマイズしてください */
-}
-
-@media screen and (max-width: 670px) {
-  #hamburger:checked
-    ~ .c-hamburger-menu__button
-    .c-hamburger-menu__button-mark:nth-of-type(1) {
-    transform: translate(2px, 1px) rotate(45deg); /* カスタマイズしてください */
-    transform-origin: 0%; /* カスタマイズしてください */
-  }
-  #hamburger:checked
-    ~ .c-hamburger-menu__button
-    .c-hamburger-menu__button-mark:nth-of-type(2) {
-    opacity: 0;
-  }
-  #hamburger:checked
-    ~ .c-hamburger-menu__button
-    .c-hamburger-menu__button-mark:nth-of-type(3) {
-    transform: translate(2px, 3px) rotate(-45deg); /* カスタマイズしてください */
-    transform-origin: 0%; /* カスタマイズしてください */
+  #slideshow {
+    height: 500px;
   }
 
-  /* スライドショー */
-
-#slideshow {
-  height: 350px;
-}
-
-  #slideshow img{
+  #slideshow img {
     width: 100%;
-    height: 300px;
+    height: 450px;
     overflow: hidden;
   }
 
-  .main-about h1{
+  .main-about h1 {
     padding: 0 0 10px;
   }
-  .main-about p{
-    line-height: 1.3;
+
+  .main-about p {
+    line-height: 2;
   }
 
   /* 施設 */
   .contents {
     padding: 10px 0 10px;
     display: inline-block;
+    width: 80%;
+    margin-left: 100px;
   }
+
   .content {
     width: 100%;
-    padding: 50px 0;  
+    padding: 50px 0;
+  }
+
+  .content img {
+    width: 80%;
+    border-radius: 8px;
+
   }
 
   /* おすすめ商品 */
@@ -81,12 +45,122 @@
   }
 
   /* お問い合わせ */
-  .contact{
+  .contact {
     padding: 20px 0;
   }
 
   /* おすすめ商品とサービス*/
-.pan img{
-  width: 100%;
+  .pan img {
+    width: 100%;
+    border-radius: 8px;
+  }
 }
+
+/* スマホサイズで見た場合のスタイル */
+@media screen and (max-width: 670px) {
+
+  /* ヘッダー */
+  .c-hamburger-menu__button {
+    align-items: center;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* カスタマイズしてください */
+    height: 32px;
+    /* カスタマイズしてください */
+    justify-content: center;
+    width: 32px;
+    /* カスタマイズしてください */
+  }
+}
+
+.c-hamburger-menu__button-mark {
+  background-color: #fff;
+  /* カスタマイズしてください */
+  display: block;
+  height: 1.5px;
+  /* カスタマイズしてください */
+  transition: 0.3s;
+  /* カスタマイズしてください */
+  width: 20px;
+  /* カスタマイズしてください */
+}
+
+@media screen and (max-width: 670px) {
+  #hamburger:checked~.c-hamburger-menu__button .c-hamburger-menu__button-mark:nth-of-type(1) {
+    transform: translate(2px, 1px) rotate(45deg);
+    /* カスタマイズしてください */
+    transform-origin: 0%;
+    /* カスタマイズしてください */
+  }
+
+  #hamburger:checked~.c-hamburger-menu__button .c-hamburger-menu__button-mark:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  #hamburger:checked~.c-hamburger-menu__button .c-hamburger-menu__button-mark:nth-of-type(3) {
+    transform: translate(2px, 3px) rotate(-45deg);
+    /* カスタマイズしてください */
+    transform-origin: 0%;
+    /* カスタマイズしてください */
+  }
+
+  /* スライドショー */
+
+  #slideshow {
+    height: 350px;
+  }
+
+  #slideshow img {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  /* about */
+  .main-about h1 {
+    padding: 0 0 10px;
+  }
+
+  .main-about p {
+    line-height: 1.5;
+  }
+
+  /* 施設 */
+  .contents {
+    padding: 10px 0 10px;
+    display: inline-block;
+    margin-left: 0;
+    width: 100%
+  }
+
+  .content {
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  .content img {
+    width: 100%;
+  }
+
+
+  /* おすすめ商品 */
+  .product {
+    float: left;
+    width: 100%;
+  }
+
+  /* お問い合わせ */
+  .contact {
+    padding: 20px 0;
+  }
+
+  /* おすすめ商品とサービス*/
+  .pan img {
+    width: 100%;
+  }
 }
